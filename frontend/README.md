@@ -1,4 +1,4 @@
-# Metadata Explorer v1
+# Metadata Explorer v3
 
 Mock-first React/TypeScript interface for browsing, searching, and comparing biomedical metadata models, nodes, properties, terms, and permissible value sets.
 
@@ -10,7 +10,7 @@ Mock-first React/TypeScript interface for browsing, searching, and comparing bio
 - Terminology browsing and term detail views
 - Graph alignment, free-form graph, overlay, and value-set stack comparison
 
-The GitHub Pages build uses hash routing so every route remains reload-safe under `/bento-sts-monorepo/v1/`.
+This release reproduces the approved v2 portfolio source as the hosted v3 experience. The GitHub Pages build uses hash routing so every route remains reload-safe under `/bento-sts-monorepo/v3/`.
 
 ## Local development
 

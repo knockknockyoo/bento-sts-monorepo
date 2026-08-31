@@ -14,6 +14,50 @@ const navItems = [
 export function AppShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
 
+  if (pathname !== "/") {
+    const modelBrowserActive = pathname === "/search" || pathname.startsWith("/models");
+    const termBrowserActive = pathname.startsWith("/terms");
+    const comparisonActive = pathname.startsWith("/compare");
+
+    return (
+      <div className="workspace-shell-v2">
+        <a className="skip-link" href="#main-content">Skip to main content</a>
+        <aside className="workspace-sidebar-v2" aria-label="Metadata Explorer workspace">
+          <Link className="workspace-brand-v2" href="/" aria-label="Metadata Explorer home">
+            <span className="workspace-brand-mark-v2" aria-hidden="true">ME</span>
+            <span><strong>Metadata Explorer</strong><small>NCI data standards</small></span>
+            <span className="workspace-brand-chevron-v2" aria-hidden="true">‹</span>
+          </Link>
+          <nav className="workspace-nav-v2" aria-label="Workspace navigation">
+            <p>Explore</p>
+            <Link href="/models" aria-current={modelBrowserActive ? "page" : undefined}>
+              <span className="workspace-nav-icon-v2 icon-models-v2" aria-hidden="true"><i /><i /><i /><i /></span>
+              <span>Model Browser</span>
+            </Link>
+            <Link href="/terms" aria-current={termBrowserActive ? "page" : undefined}>
+              <span className="workspace-nav-icon-v2 icon-terms-v2" aria-hidden="true"><i /><i /><i /></span>
+              <span>Term Browser</span>
+            </Link>
+            <p>Analysis</p>
+            <Link href="/compare" aria-current={comparisonActive ? "page" : undefined}>
+              <span className="workspace-nav-icon-v2 icon-compare-v2" aria-hidden="true"><i /><i /></span>
+              <span>Model Comparison</span>
+            </Link>
+          </nav>
+          <div className="workspace-sidebar-footer-v2">
+            <span>National Cancer Institute</span>
+            <small>National Institutes of Health</small>
+            <small>Metadata Explorer · v3</small>
+            <small>Mock-only · Unverified against MDB</small>
+          </div>
+        </aside>
+        <div className="workspace-main-v2">
+          <main id="main-content" className="portal-main portal-main-workspace" tabIndex={-1}>{children}</main>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="portal-shell">
       <a className="skip-link" href="#main-content">Skip to main content</a>

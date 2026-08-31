@@ -809,7 +809,7 @@ body { background: var(--portal-page); color: var(--portal-text); font-family: "
 .portal-main-workspace .page-section { width: min(100% - 40px, 1180px); min-height: 520px; margin-inline: auto; background: transparent; padding: 38px 32px 76px; }
 
 .reference-home { background: #f8fbfd; }
-.reference-hero { min-height: 410px; display: flex; align-items: stretch; background-color: #f9fcfe; background-image: url("/bento-sts-monorepo/v1/semantic-network-hero.png"); background-position: center; background-size: cover; }
+.reference-hero { min-height: 410px; display: flex; align-items: stretch; background-color: #f9fcfe; background-image: url("/bento-sts-monorepo/v3/semantic-network-hero.png"); background-position: center; background-size: cover; }
 .reference-hero-grid { display: grid; grid-template-columns: minmax(250px, .75fr) minmax(520px, 1.45fr); align-items: center; gap: 58px; padding-block: 58px; }
 .reference-hero-copy h1 { max-width: 330px; margin: 0 0 16px; color: var(--portal-navy); font-family: Raleway, "Helvetica Neue", Arial, sans-serif; font-size: clamp(2.4rem, 4.2vw, 4rem); font-weight: 500; line-height: 1.03; letter-spacing: -.035em; }
 .reference-hero-copy p { max-width: 320px; margin: 0; color: #334e68; font-size: 1.08rem; line-height: 1.55; }
@@ -828,7 +828,7 @@ body { background: var(--portal-page); color: var(--portal-text); font-family: "
 .reference-source-summary dt { color: #5f6f80; font-size: .74rem; }
 .reference-source-summary dd { margin: 3px 0 0; color: var(--portal-navy); font-family: Raleway, Arial, sans-serif; font-size: 1.3rem; font-weight: 700; }
 .reference-intro { min-height: 300px; display: grid; grid-template-columns: 1.1fr .9fr; }
-.reference-intro-visual { min-height: 300px; background-color: #082b61; background-image: linear-gradient(rgb(4 42 104 / 76%), rgb(4 42 104 / 90%)), url("/bento-sts-monorepo/v1/semantic-network-hero.png"); background-position: right center; background-size: cover; }
+.reference-intro-visual { min-height: 300px; background-color: #082b61; background-image: linear-gradient(rgb(4 42 104 / 76%), rgb(4 42 104 / 90%)), url("/bento-sts-monorepo/v3/semantic-network-hero.png"); background-position: right center; background-size: cover; }
 .reference-intro-copy { display: grid; place-items: center start; background: #176bd3; padding: 48px clamp(40px, 7vw, 110px); color: white; }
 .reference-intro-copy > div { max-width: 460px; }
 .reference-intro-copy h2 { margin: 0 0 15px; color: white; font-family: Raleway, "Helvetica Neue", Arial, sans-serif; font-size: clamp(1.8rem, 3vw, 2.65rem); font-weight: 500; line-height: 1.13; }
@@ -934,4 +934,216 @@ body { background: var(--portal-page); color: var(--portal-text); font-family: "
   .portal-footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .portal-footer-grid > div:last-child { grid-column: auto; }
   .portal-footer-legal > div { display: grid; gap: 4px; justify-items: center; padding-block: 12px; text-align: center; }
+}
+
+/* v3 functional workspace: use the reference rail structure with the existing light portal identity. */
+.workspace-shell-v2 {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 224px minmax(0, 1fr);
+  background: var(--portal-page);
+}
+
+.workspace-sidebar-v2 {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  border-right: 1px solid var(--portal-line);
+  background: var(--portal-panel);
+  color: var(--portal-text);
+}
+
+.workspace-brand-v2 {
+  min-height: 94px;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 11px;
+  border-bottom: 1px solid var(--portal-line);
+  padding: 17px 18px;
+  background: var(--portal-panel);
+  color: var(--portal-navy);
+  text-decoration: none;
+}
+
+.workspace-brand-v2:hover {
+  background: #f5f9fc;
+  color: var(--portal-navy);
+}
+
+.workspace-brand-mark-v2 {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #a9c6df;
+  border-radius: 3px;
+  background: var(--portal-panel-blue);
+  color: var(--portal-blue-dark);
+  font-size: .62rem;
+  font-weight: 900;
+  letter-spacing: -.02em;
+}
+
+.workspace-brand-v2 strong,
+.workspace-brand-v2 small {
+  display: block;
+}
+
+.workspace-brand-v2 strong {
+  color: var(--portal-navy);
+  font-family: Raleway, "Source Sans Pro", Arial, sans-serif;
+  font-size: .86rem;
+  line-height: 1.15;
+}
+
+.workspace-brand-v2 small {
+  margin-top: 4px;
+  color: var(--portal-muted);
+  font-size: .61rem;
+  letter-spacing: .09em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.workspace-brand-chevron-v2 {
+  color: #78889a;
+  font-size: 1.55rem;
+  font-weight: 300;
+}
+
+.workspace-nav-v2 {
+  display: grid;
+  padding-top: 8px;
+}
+
+.workspace-nav-v2 > p {
+  margin: 13px 19px 6px;
+  color: #687789;
+  font-size: .58rem;
+  font-weight: 800;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+
+.workspace-nav-v2 > a {
+  min-height: 49px;
+  display: grid;
+  grid-template-columns: 25px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  border-left: 4px solid transparent;
+  padding: 10px 15px 10px 13px;
+  color: #33445a;
+  font-size: .83rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.workspace-nav-v2 > a:hover,
+.workspace-nav-v2 > a:focus-visible {
+  background: #f0f5f9;
+  color: var(--portal-navy);
+}
+
+.workspace-nav-v2 > a[aria-current="page"] {
+  border-left-color: var(--portal-blue);
+  background: #e7f1f8;
+  color: var(--portal-navy);
+  font-weight: 700;
+}
+
+.workspace-nav-icon-v2 {
+  position: relative;
+  width: 19px;
+  height: 19px;
+  display: block;
+  color: #687b91;
+}
+
+.workspace-nav-v2 > a[aria-current="page"] .workspace-nav-icon-v2 {
+  color: var(--portal-teal);
+}
+
+.workspace-nav-icon-v2 i {
+  position: absolute;
+  display: block;
+  border: 1.5px solid currentcolor;
+}
+
+.icon-models-v2 i {
+  width: 6px;
+  height: 6px;
+}
+
+.icon-models-v2 i:nth-child(1) { left: 1px; top: 1px; }
+.icon-models-v2 i:nth-child(2) { right: 1px; top: 1px; }
+.icon-models-v2 i:nth-child(3) { left: 1px; bottom: 1px; }
+.icon-models-v2 i:nth-child(4) { right: 1px; bottom: 1px; }
+
+.icon-terms-v2 i {
+  left: 3px;
+  width: 14px;
+  height: 0;
+  border-width: 1px 0 0;
+}
+
+.icon-terms-v2 i:nth-child(1) { top: 4px; }
+.icon-terms-v2 i:nth-child(2) { top: 9px; }
+.icon-terms-v2 i:nth-child(3) { top: 14px; }
+
+.icon-compare-v2 i {
+  top: 2px;
+  width: 7px;
+  height: 15px;
+  border-radius: 1px;
+}
+
+.icon-compare-v2 i:first-child { left: 1px; }
+.icon-compare-v2 i:last-child { right: 1px; }
+
+.workspace-sidebar-footer-v2 {
+  display: grid;
+  gap: 3px;
+  margin-top: auto;
+  border-top: 1px solid var(--portal-line);
+  background: #f5f7f9;
+  padding: 18px 19px;
+  color: var(--portal-muted);
+  font-size: .65rem;
+}
+
+.workspace-sidebar-footer-v2 small {
+  color: #788493;
+}
+
+.workspace-main-v2 {
+  min-width: 0;
+  background: var(--portal-page);
+}
+
+.workspace-main-v2 > main {
+  min-height: 100vh;
+}
+
+@media (max-width: 1000px) {
+  .workspace-shell-v2 { grid-template-columns: 196px minmax(0, 1fr); }
+  .workspace-brand-v2 { padding-inline: 14px; }
+  .workspace-nav-v2 > a { padding-inline: 10px; }
+}
+
+@media (max-width: 760px) {
+  .workspace-shell-v2 { display: block; }
+  .workspace-sidebar-v2 { position: static; width: 100%; height: auto; overflow: visible; }
+  .workspace-brand-v2 { min-height: 66px; grid-template-columns: 32px minmax(0, 1fr); padding-block: 10px; }
+  .workspace-brand-chevron-v2 { display: none; }
+  .workspace-nav-v2 { grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--portal-line); padding-top: 0; }
+  .workspace-nav-v2 > p { display: none; }
+  .workspace-nav-v2 > a { min-height: 59px; grid-template-columns: 1fr; justify-items: center; gap: 3px; border-left: 0; border-bottom: 4px solid transparent; padding: 7px 4px 5px; font-size: .72rem; text-align: center; }
+  .workspace-nav-v2 > a[aria-current="page"] { border-bottom-color: var(--portal-blue); }
+  .workspace-sidebar-footer-v2 { display: none; }
 }
